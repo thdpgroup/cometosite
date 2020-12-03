@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.0-0",
@@ -38,7 +39,6 @@
     "node-sass": "^4.12.0",
     "postcss": "^7",
     "sass-loader": "^8.0.2",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "~3.9.3",
     "vue-jest": "^5.0.0-0"
   },
@@ -56,8 +56,9 @@
       "ecmaVersion": 2020
     },
     "rules": {
-      "semi": ["error", "never"],
-      "max-len": ["error", { "code": 1000 }]
+      "comma-dangle": ["error", "never"],
+      "max-len": ["error", { "code": 1000 }],
+      "semi": ["error", "never"]
     },
     "overrides": [
       {
