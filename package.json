@@ -9,6 +9,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.21.0",
     "core-js": "^3.6.5",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "vue": "^3.0.0",
@@ -56,9 +57,20 @@
       "ecmaVersion": 2020
     },
     "rules": {
-      "comma-dangle": ["error", "never"],
-      "max-len": ["error", { "code": 1000 }],
-      "semi": ["error", "never"]
+      "comma-dangle": [
+        "error",
+        "never"
+      ],
+      "max-len": [
+        "error",
+        {
+          "code": 1000
+        }
+      ],
+      "semi": [
+        "error",
+        "never"
+      ]
     },
     "overrides": [
       {

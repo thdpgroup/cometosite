@@ -1,12 +1,11 @@
-import { createStore } from 'vuex'
+import { createStore, ModuleTree } from 'vuex'
+
+import theme from './modules/theme'
+
+const modules: ModuleTree<{}> = {
+  theme
+}
 
 export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  },
+  modules
 })
