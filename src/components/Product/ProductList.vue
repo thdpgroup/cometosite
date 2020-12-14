@@ -3,9 +3,13 @@
     <!-- {{themeList[0]}} -->
     <ProductItem
       :authorName="theme.author_username"
+      :authorUrl="theme.author_url"
+      :features="theme.key_features"
       :img="theme.previews.landscape_preview.landscape_url"
       :key="theme.id"
       :name="theme.name"
+      :price="theme.price_cents"
+      :rating="theme.rating.rating"
       :url="theme.url"
       v-for="theme in themeList"/>
   </div>

@@ -36,7 +36,7 @@ interface MTheme {
     count: number;
   };
   updated_at: string;
-  trending: false;
+  trending: boolean;
   previews?: MThemePreview;
   attributes?: Array<{
     name: string;
