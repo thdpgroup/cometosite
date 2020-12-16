@@ -1,57 +1,103 @@
 <template>
-  <div class="lg:flex my-5 p-5 bg-white shadow-lg rounded-sm">
-    <div
-      :style="`background-image: url(${img})`"
-      :title="name"
-      class="h-40 lg:w-80 bg-cover relative rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
-        <a
-          :href="url"
-          class="absolute top-0 right-0 bottom-0 left-0"
-          target="_blank"/>
-    </div>
-    <div
-      class="pl-4 flex flex-1 flex-col justify-between leading-normal">
-        <div class="mb-8">
-          <div class="text-gray-900 font-bold text-lg mb-2 hover:underline">
-            <a
-              :href="url"
-              target="_blank">
-                {{name}}
-            </a>
-          </div>
-          <p class="text-sm text-gray-600 flex items-center">
-            author&nbsp;<a :href="authorUrl" class="hover:underline" target="_blank">{{authorName}}</a>
-          </p>
-        </div>
-        <div class="flex items-center">
-          <ul class="list-disc list-inside text-gray-700">
-            <li :key="index" v-for="(feat, index) in features">{{feat}}</li>
-          </ul>
-        </div>
-    </div>
-    <div class="border-l border-gray-300 pl-4 lg:w-60 flex flex-wrap text-center justify-center items-end">
-      <div class="text-xl font-semibold text-gray-900">${{price/1000}}</div>
-      <div class="w-full"/>
-      <div class="text-sm">
-        <svg height="0" width="0">
-          <defs>
-            <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style="stop-color:#cc4b37;stop-opacity:1" />
-              <stop offset="50%" style="stop-color:#cc4b37;stop-opacity:1" />
-              <stop offset="50%" style="stop-color:transparent;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:transparent;stop-opacity:1" />
-            </linearGradient>
-          </defs>
+  <div class="">
+    <div class="py-6">
+  <!-- Breadcrumbs -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center space-x-2 text-gray-400 text-sm">
+      <a href="#" class="hover:underline hover:text-gray-600">Home</a>
+      <span>
+        <svg class="h-5 w-5 leading-none text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
+      </span>
+      <a href="#" class="hover:underline hover:text-gray-600">Electronics</a>
+      <span>
+        <svg class="h-5 w-5 leading-none text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </span>
+      <span>Headphones</span>
+    </div>
+  </div>
+  <!-- ./ Breadcrumbs -->
 
-        <svg :key="index" class="inline-block w-4" viewBox="0 0 40 37" stroke="#cc4b37" xmlns="http://www.w3.org/2000/svg" v-for="(rate, index) in 5">
-          <path d="M20.388,10.918L32,12.118l-8.735,7.749L25.914,
-             31.4l-9.893-6.088L6.127,31.4l2.695-11.533L0,
-             12.118l11.547-1.2L16.026,0.6L20.388,10.918z"
-            :fill="renderRating(rate)" stroke-width="1" stroke="#cc4b37"/>
-        </svg>
-        ({{convertRating}})</div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+    <div class="flex flex-col md:flex-row -mx-4">
+      <div class="md:flex-1 px-4">
+        <div x-data="{ image: 1 }" x-cloak>
+          <div class="h-64 md:h-80 rounded-lg bg-gray-100 mb-4">
+            <div class="h-64 md:h-80 rounded-lg bg-gray-100 mb-4 flex items-center justify-center">
+              <span class="text-5xl">1</span>
+            </div>
+          </div>
+
+          <div class="flex -mx-2 mb-4">
+            <div class="flex-1 px-2">
+              <button class="focus:outline-none w-full rounded-lg h-24 md:h-32 bg-gray-100 flex items-center justify-center">
+                <span class="text-2xl">1</span>
+              </button>
+            </div>
+            <div class="flex-1 px-2">
+              <button class="focus:outline-none w-full rounded-lg h-24 md:h-32 bg-gray-100 flex items-center justify-center">
+                <span class="text-2xl">2</span>
+              </button>
+            </div>
+            <div class="flex-1 px-2">
+              <button class="focus:outline-none w-full rounded-lg h-24 md:h-32 bg-gray-100 flex items-center justify-center">
+                <span class="text-2xl">3</span>
+              </button>
+            </div>
+            <div class="flex-1 px-2">
+              <button class="focus:outline-none w-full rounded-lg h-24 md:h-32 bg-gray-100 flex items-center justify-center">
+                <span class="text-2xl">4</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="md:flex-1 px-4">
+        <h2 class="mb-2 leading-tight tracking-tight font-bold text-gray-800 text-2xl md:text-3xl">Lorem ipsum dolor, sit amet consectetur, adipisicing elit.</h2>
+        <p class="text-gray-500 text-sm">By <a href="#" class="text-indigo-600 hover:underline">ABC Company</a></p>
+
+        <div class="flex items-center space-x-4 my-4">
+          <div>
+            <div class="rounded-lg bg-gray-100 flex py-2 px-3">
+              <span class="text-indigo-400 mr-1 mt-1">$</span>
+              <span class="font-bold text-indigo-600 text-3xl">25</span>
+            </div>
+          </div>
+          <div class="flex-1">
+            <p class="text-green-500 text-xl font-semibold">Save 12%</p>
+            <p class="text-gray-400 text-sm">Inclusive of all Taxes.</p>
+          </div>
+        </div>
+
+        <p class="text-gray-500">Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Vitae exercitationem porro saepe ea harum corrupti vero id laudantium enim, libero blanditiis expedita cupiditate a est.</p>
+
+        <div class="flex py-4 space-x-4">
+          <div class="relative">
+            <div class="text-center left-0 pt-2 right-0 absolute block text-xs uppercase text-gray-400 tracking-wide font-semibold">Qty</div>
+            <select class="cursor-pointer appearance-none rounded-xl border border-gray-200 pl-4 pr-8 h-14 flex items-end pb-1">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+
+            <svg class="w-5 h-5 text-gray-400 absolute right-0 bottom-0 mb-2 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+            </svg>
+          </div>
+
+          <button type="button" class="h-14 px-6 py-2 font-semibold rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white">
+            Add to Cart
+          </button>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
   </div>
 </template>
 
@@ -59,48 +105,6 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  computed: {
-    convertRating(): number {
-      return Number(this.rating)
-    }
-  },
-  methods: {
-    renderRating(rate: number) {
-      if (rate <= this.convertRating) {
-        return '#cc4b37'
-      }
-      if (rate >= Math.ceil(this.convertRating)) {
-        return 'url(#grad)'
-      }
-      return '#fff'
-    }
-  },
-  name: 'ProductItem',
-  props: {
-    authorName: {
-      default: ''
-    },
-    authorUrl: {
-      default: ''
-    },
-    features: {
-      default: []
-    },
-    img: {
-      default: ''
-    },
-    name: {
-      default: ''
-    },
-    price: {
-      default: 0
-    },
-    rating: {
-      default: 0
-    },
-    url: {
-      default: ''
-    }
-  }
+
 })
 </script>
